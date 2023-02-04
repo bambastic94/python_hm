@@ -13,21 +13,16 @@
 """
 
 a = input("Введите целые числа через пробел: ")
-a_lst = int(a.replace(' ', ''))
-b_lst = str(a_lst)
+a_lst = a.replace(' ', '')
 
-count = 0
-while a_lst > 0:
-    a_lst //= 10
-    count += 1
+count = len(a_lst)
+lst = list(a_lst)
 
-lst = list(b_lst)
-
-for i in range(0,count-1,2):
+for i in range(0, count - 1, 2):
     temp = lst[i]
-    lst[i] = lst[i+1]
+    lst[i] = lst[i + 1]
     lst[i + 1] = temp
 
 print(lst)
 
-#Работает только для чисел меньше 10
+# Работает только для чисел меньше 10
