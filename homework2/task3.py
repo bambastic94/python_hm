@@ -17,7 +17,5 @@
 
 lst = [5, "string", 0.15, True, None]
 
-for i in range(0, len(lst)):
-    print(type(lst[i]))
-
-#PyLint подсказал насчет enumerate, но пока не уловил что я делал не так, может позже в лекциях будет
+for el in lst:
+    print(type(el))

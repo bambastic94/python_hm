@@ -9,7 +9,6 @@
 n + nn + nnn = 369
 """
 
-print("Введите целое положительное число: ")
-n = int(input())
+n = input("Введите целое положительное число: ")
 
-print(f"n + nn + nnn = {str(n) + str(n + n) + str(n + n + n)}")
+print(f"n + nn + nnn = {int(n) + int(n + n) + int(n + n + n)}")

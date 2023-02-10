@@ -15,8 +15,7 @@
 2. перерефриж
 """
 
-a = input("Введите слова через пробел: ")
-lst = a.split()
+lst = (input("Введите слова через пробел: ")).split()
 
-for i in range(0,len(lst)):
-    print(f"{i+1}. {lst[i]}")
+for i in range(len(lst)):
+    print(f"{i + 1}. {lst[i][:10]}")

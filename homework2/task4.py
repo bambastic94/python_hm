@@ -19,10 +19,6 @@ count = len(a_lst)
 lst = list(a_lst)
 
 for i in range(0, count - 1, 2):
-    temp = lst[i]
-    lst[i] = lst[i + 1]
-    lst[i + 1] = temp
+    lst[i], lst[i + 1] = lst[i + 1], lst[i]
 
-print(lst)
-
-# Работает только для чисел меньше 10
+print(*lst)
