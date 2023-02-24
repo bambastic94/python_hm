@@ -15,3 +15,20 @@
 
 Проверить работу примера, создав экземпляр и вызвав описанный метод.
 """
+
+from time import sleep
+
+
+class TrafficLight:
+    cols = {"Red": 7, "Yellow": 2, "Green": 5}
+    _color = None
+
+    def running(self):
+        for key, secs in self.cols.items():
+            _color = key
+            sleep(secs)
+            print(key)
+
+
+traf = TrafficLight()
+traf.running()
