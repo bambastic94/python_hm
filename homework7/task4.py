@@ -23,4 +23,38 @@
 первой матрицы складываем с первым элементом первой строки второй матрицы и т.д.
 """
 
+class Matrix:
+    def __init__(self, lst):
+        self.matr = lst
+
+    def __str__(self):
+        return str('\n'.join(['\t'.join([str(j) for j in i]) for i in self.matr]))
+
+    def __add__(self, other):
+        result = []
+        numbers = []
+        for i in range(len(self.matr)):
+            for j in range(len(self.matr[0])):
+                summa = other.matr[i][j] + self.matr[i][j]
+                numbers.append(summa)
+                if len(numbers) == len(self.matr[0]):
+                    result.append(numbers)
+                    numbers = []
+        return Matrix(result)
+
+
+a = [[4, 5, -5], [2, 6, -5], [4, 33, 0]]
+b = [[1, -5, 9], [16, -1, -5], [5, 63, 4]]
+m1 = Matrix(a)
+m2 = Matrix(b)
+
+print("Matrix 1")
+print(m1.__str__(), '\n')
+
+print("Matrix 2")
+print(m2.__str__(), '\n')
+
+print("Matrix 1 + Matrix 2")
+print(m1 + m2)
+
 
