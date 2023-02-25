@@ -18,16 +18,16 @@ length (длина в метрах), width (ширина в метрах).
 """
 
 class Road:
-    __length = 5000
-    __width = 20
+    _length = 5000
+    _width = 20
 
     def __init__(self, weight_cm, depth):
         self.weight_cm = weight_cm
         self.depth = depth
 
     def weight(self):
-        print(f"{self.__width}м*{self.__length}м*{self.weight_cm}кг*{self.depth}м = "
-              f"{self.__width * self.__length * self.weight_cm * self.depth}")
+        print(f"{self._width}м*{self._length}м*{self.weight_cm}кг*{self.depth}м = "
+              f"{self._width * self._length * self.weight_cm * self.depth}")
 
 
 wgt = Road(25, 0.05)

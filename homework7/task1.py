@@ -21,11 +21,11 @@ from time import sleep
 
 class TrafficLight:
     cols = {"Red": 7, "Yellow": 2, "Green": 5}
-    _color = None
+    __color = None
 
     def running(self):
         for key, secs in self.cols.items():
-            _color = key
+            __color = key
             sleep(secs)
             print(key)
 
