@@ -19,25 +19,17 @@ ASCII(например, €);
 совпадают ли они с исходными.
 """
 
+import yaml
 
+data = {'items': ['printer', 'computer', 'keyboard', 'mouse'],
+        'num': 3,
+        'price': {
+            'printer': '30€-40€',
+            'computer': '65€-88€'
+        }}
 
+with open('file.yaml', 'w') as f:
+    yaml.dump(data, f, default_flow_style=False, allow_unicode=True)
 
-
-
-
-
-
-
-
-
-
-import socket
-
-obj_sock = socket.socket()
-
-# bytes ->
-obj_sock.sendto(var, ())
-
-#close
-
-клиент 1) 2)
+with open('file.yaml') as f:
+    print(f.read())
