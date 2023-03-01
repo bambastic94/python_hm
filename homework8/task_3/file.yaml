@@ -1,0 +1,9 @@
+items:
+- printer
+- computer
+- keyboard
+- mouse
+num: 3
+price:
+  computer: 65ˆ-88ˆ
+  printer: 30ˆ-40ˆ
