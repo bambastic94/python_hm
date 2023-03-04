@@ -7,3 +7,14 @@
 Подсказки:
 --- используйте модуль chardet, иначе задание не засчитается!!!
 """
+
+import subprocess
+import chardet
+
+ARGS = [['ping', 'yandex.ru'], ['ping', 'youtube.com']]
+for el in ARGS:
+    YA_PING = subprocess.Popen(el, stdout=subprocess.PIPE)
+    for line in YA_PING.stdout:
+        result = chardet.detect(line)
+        line = line.decode(result['encoding']).encode('utf-8')
+        print(line.decode('utf-8'))
