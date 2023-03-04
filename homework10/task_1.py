@@ -15,3 +15,20 @@
 --- '\u0440\u0430\u0437\u0440\u0430\u0431\u043e\u0442\u043a\u0430' - набор кодовых точек
 --- используйте списки и циклы, не дублируйте функции
 """
+
+
+wrd1 = 'разработка'
+wrd2 = 'сокет'
+wrd3 = 'декоратор'
+wrd_lst = [wrd1, wrd2, wrd3]
+for el in wrd_lst:
+    print(el)
+    print(type(el))
+
+unic1 = '\u0440\u0430\u0437\u0440\u0430\u0431\u043e\u0442\u043a\u0430'
+unic2 = '\u0441\u043e\u043a\u0435\u0442'
+unic3 = '\u0434\u0435\u043a\u043e\u0440\u0430\u0442\u043e\u0440'
+unic_lst = [unic1, unic2, unic3]
+for el in unic_lst:
+    print(el)
+    print(type(el))
